@@ -1,0 +1,74 @@
+@charset "utf-8";
+@import "compass/css3";
+
+#_easygallery{
+  width:100%;
+  height:100%;
+  width:100vw;
+  height:100vh;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index:99;
+  overflow: hidden;
+  display: none;
+  .bg{
+    width:100%;
+    height:100%;
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index:0;
+    background: #000;
+    @include opacity(.5);
+  }
+  .image-area{
+    position: absolute;
+    width:100%;
+    height:100%;
+    width:100vw;
+    height:100vh;
+    @include background-size(cover);
+    left:0;
+    top:0;
+    &:hover{
+      cursor: move;
+    }
+  }
+  .image-area.moving{
+
+  }
+  .tool{
+    height:40px;
+    width:160px;
+    @include border-radius(5px);
+    overflow: hidden;
+    position: absolute;
+    right:30px;
+    top:10px;
+    background: #fff;
+    color: #000;
+    font-size:16px;
+    &>div{
+      width:40px;
+      height:40px;
+      line-height:40px;
+      text-align: center;
+      float: left;
+      cursor: pointer;
+      &:hover{
+        background: #000;
+        color: #fff;
+      }
+    }
+    &::after{
+      content: '';
+      display: block;
+      width:0;
+      height:0;
+      clear: both;
+    }
+  }
+}
