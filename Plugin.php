@@ -48,7 +48,7 @@ class Gallery_Plugin implements Typecho_Plugin_Interface
      */
     $wrap = new Typecho_Widget_Helper_Form_Element_Text('wrap', NULL, '#main', _t('图片容器选择器'));
     $form->addInput($wrap);
-    $item = new Typecho_Widget_Helper_Form_Element_Text('item', NULL, '.img', _t('图片Item选择器'));
+    $item = new Typecho_Widget_Helper_Form_Element_Text('item', NULL, 'img', _t('图片Item选择器'));
     $form->addInput($item);
 
   }
